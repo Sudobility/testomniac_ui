@@ -9,8 +9,8 @@
         "@heroicons/react": "~2.2.0",
         "@sudobility/components": "^5.3.45",
         "@sudobility/design": "^1.1.66",
-        "@sudobility/testomniac_client": "^0.0.140",
-        "@sudobility/testomniac_lib": "^0.0.144",
+        "@sudobility/testomniac_client": "^0.0.141",
+        "@sudobility/testomniac_lib": "^0.0.145",
         "@sudobility/testomniac_types": "^0.0.115",
         "@sudobility/types": "^1.9.76",
         "@tanstack/react-query": "~5.104.5",
@@ -32,8 +32,8 @@
         "@heroicons/react": ">=2.0.0",
         "@sudobility/components": "^5.3.45",
         "@sudobility/design": "^1.1.66",
-        "@sudobility/testomniac_client": "^0.0.140",
-        "@sudobility/testomniac_lib": "^0.0.144",
+        "@sudobility/testomniac_client": "^0.0.141",
+        "@sudobility/testomniac_lib": "^0.0.145",
         "@sudobility/testomniac_types": "^0.0.115",
         "@sudobility/types": "^1.9.76",
         "@tanstack/react-query": ">=5.0.0",
@@ -241,9 +241,9 @@
 
     "@sudobility/design": ["@sudobility/design@1.1.66", "https://npm.pkg.github.com/download/@sudobility/design/1.1.66/08ff28eba0e05a9e6916a0aae67ac2c36df590f2", { "peerDependencies": { "clsx": ">=2.0.0", "tailwind-merge": ">=2.0.0" } }, "sha512-E+5HxPKHsujJQMYhtdgtzcGkGtaHhuWpMBd05n+dq/FMihrLT8GeMj6G75XpaxqQmbWYOfkjHEUV2GFcECzeNw=="],
 
-    "@sudobility/testomniac_client": ["@sudobility/testomniac_client@0.0.140", "https://npm.pkg.github.com/download/@sudobility/testomniac_client/0.0.140/fbbd9e29d5b8df006ccb975e7ebe94ecb7900548", { "peerDependencies": { "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-nXCIVGgKOOF1mj1RJQX+cH5Pyqoxxbz1140Sio0TypVjw1nEkAEHzcmoedD75qyKcUtjOWf1uXfmmNgKAWglZQ=="],
+    "@sudobility/testomniac_client": ["@sudobility/testomniac_client@0.0.141", "https://npm.pkg.github.com/download/@sudobility/testomniac_client/0.0.141/e331492682cc8179b60721b5b809b8b4156dc081", { "peerDependencies": { "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-9Z5rm9DfueUWZlP/3g0u56m5jyDk3AQpd0Jo+weZr3kB0WzEM7vG9a9hGBq8GWhUe0S+q2s6lTQznZrrVqNvLg=="],
 
-    "@sudobility/testomniac_lib": ["@sudobility/testomniac_lib@0.0.144", "https://npm.pkg.github.com/download/@sudobility/testomniac_lib/0.0.144/0351a4926f01b335aed7d5252fc26280ca13ebbb", { "dependencies": { "dagre": "~0.8.5" }, "peerDependencies": { "@sudobility/testomniac_client": "^0.0.140", "@sudobility/testomniac_types": "^0.0.115", "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0", "zustand": ">=5.0.0" } }, "sha512-BzsrBUpMf4bL/Ek/OzjYqKPyOqq8jqHaiNn7kh9gNEp65dWAs41SbtiOAKpkeo0g5sOu1KxUYR95UNbzAjS7JQ=="],
+    "@sudobility/testomniac_lib": ["@sudobility/testomniac_lib@0.0.145", "https://npm.pkg.github.com/download/@sudobility/testomniac_lib/0.0.145/c9aaa534cc6175aa4fcacad349b29054894d73f8", { "dependencies": { "dagre": "~0.8.5" }, "peerDependencies": { "@sudobility/testomniac_client": "^0.0.141", "@sudobility/testomniac_types": "^0.0.115", "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0", "zustand": ">=5.0.0" } }, "sha512-KKYJAoARWOtbJCjCzmCaT7+gWlU6OSP0IZXzB8p8QAKBTVdfhSYdMwCzuI4wiABl8BXX4Ui6qnOTqBiw5TMduw=="],
 
     "@sudobility/testomniac_types": ["@sudobility/testomniac_types@0.0.115", "https://npm.pkg.github.com/download/@sudobility/testomniac_types/0.0.115/7290c396bd202629b96d55445140655997912dd1", { "peerDependencies": { "@sudobility/types": "^1.9.76" } }, "sha512-ZfzUIwh38TIJVo2hKh6HhXrXhADExAI9Dm777RrzwGyZDcuAInBJaDjVwgB4m/nRNFqjaZiqoElmggfgxCMOaQ=="],
 
