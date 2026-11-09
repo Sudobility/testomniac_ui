@@ -16,6 +16,14 @@ providers.
 bun add @sudobility/testomniac_ui
 ```
 
+> Published to **GitHub Packages**, not npmjs. Your consumer needs an `.npmrc` mapping the
+> scope to the registry and a GitHub token with `read:packages`:
+>
+> ```
+> @sudobility:registry=https://npm.pkg.github.com
+> //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+> ```
+
 Peer deps: `react`, `react-dom`, `@tanstack/react-query`, `@tanstack/react-table`,
 `@xyflow/react`, `@heroicons/react`, and `@sudobility/{components,design,testomniac_client,testomniac_lib,testomniac_types,types}`.
 
@@ -72,11 +80,13 @@ Provide `RoutingProvider` with state-based params + a `navigate` that updates
 your view state (mount pages under a `MemoryRouter`-free setup; the library
 needs no router). Omit `SeoHead` so `<SEOHead/>` renders nothing.
 
-## Build
+## Build & test
 
 ```bash
-bun run build     # tsc -> dist/ (ESM + .d.ts)
-bun run verify    # typecheck + lint + format:check
+bun install        # deps (scoped @sudobility pkgs come from GitHub Packages)
+bun run build      # tsc -> dist/ (ESM + .d.ts)
+bun run test:unit  # vitest run (test:watch for watch mode)
+bun run verify     # typecheck + lint + format:check + test:unit + build (full gate)
 ```
 
 No bundler, no Tailwind emission — the host app's Tailwind picks up the class

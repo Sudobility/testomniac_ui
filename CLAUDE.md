@@ -40,19 +40,26 @@ src/
 ├── context/          # config + routing contexts (host integration)
 ├── hooks/            # useLocalizedNavigate, useEnvBasePath, useDashboardEnvironmentContext
 ├── components/       # cells, data, scanner, states, forms, scripts, scenarios,
-│                     #   bundles, dashboard (sidebar), pages (views), navigation
+│                     #   bundles, dashboard (sidebar), pages (views), navigation,
+│                     #   apiKeys, credentials, scan-settings, ui
 ├── config/           # priorityConfig
 ├── utils/            # formatDateTime
-└── pages/            # ~29 dashboard pages (named exports)
+└── pages/            # 33 dashboard page modules (named exports)
 ```
 
 ## Commands
 
 ```bash
-bun run build      # tsc -p tsconfig.build.json -> dist/
-bun run verify     # typecheck + lint + format:check
-bun run test       # vitest
+bun install        # scoped @sudobility deps resolve from GitHub Packages (see .npmrc)
+bun run build      # tsc -p tsconfig.build.json -> dist/ (ESM + .d.ts)
+bun run typecheck  # tsc --noEmit
+bun run lint       # eslint src   (lint:fix to autofix)
+bun run format     # prettier --write (format:check to verify)
+bun run test:unit  # vitest run --passWithNoTests  (test:watch for watch mode)
+bun run verify     # typecheck + lint + format:check + test:unit + build (full gate)
 ```
+
+There is **no** bare `bun run test` script — use `test:unit` / `test:watch`.
 
 ## Conventions
 
@@ -63,6 +70,18 @@ bun run test       # vitest
   `<Redirect/>` — never `react-router-dom` directly.
 - Styling is Tailwind class names from `@sudobility/components` / `@sudobility/design`;
   the library emits no CSS.
+
+## Gotchas
+
+- **Registry**: `@sudobility/*` deps (incl. this package) live on GitHub Packages, not
+  npmjs — `.npmrc` maps the scope to `npm.pkg.github.com`. Install/publish needs a GitHub
+  token with `read:packages` (CI publishes via `publish-target: github`).
+- **No bundler / no CSS output**: build is `tsc` only. The library ships class names; the
+  host's Tailwind must include `node_modules/@sudobility/testomniac_ui` in its `content` globs.
+- **Barrel is manual**: every public component/page/hook must be re-exported from
+  `src/index.ts` (with `.js` extensions) or it won't ship.
+- Peer deps are pinned-ish ranges; `@sudobility/*` versions move fast — keep `package.json`
+  peer + dev versions in sync.
 
 ## Consumers
 
